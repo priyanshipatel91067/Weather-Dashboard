@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+
+    color: #ffffff;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 40px 0;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    opacity: 0.8;
+}
+
+
+#refreshBtn {
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.2);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+#refreshBtn:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+
+/* Search */
+
+.search-box {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+#cityInput {
+    flex: 1;
+
+    padding: 16px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+}
+
+
+#searchBtn {
+    padding: 16px 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #5b4bc4;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Main Card */
+
+.main-card {
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+.location {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.location i {
+    font-size: 25px;
+}
+
+.location h2 {
+    font-size: 28px;
+}
+
+.location p {
+    opacity: 0.8;
+}
+
+
+.weather-icon {
+    font-size: 90px;
+
+    margin: 20px 0;
+}
+
+
+.temperature {
+    font-size: 65px;
+
+    font-weight: bold;
+}
+
+
+#weatherDescription {
+    font-size: 20px;
+
+    margin-top: 10px;
+
+    text-transform: capitalize;
+}
+
+
+/* Weather Cards */
+
+.details-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.weather-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+
+.weather-card:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255,255,255,0.22);
+}
+
+
+.weather-card .icon {
+    font-size: 35px;
+}
+
+.weather-card p {
+    opacity: 0.8;
+
+    margin-bottom: 5px;
+}
+
+.weather-card h3 {
+    font-size: 20px;
+}
+
+
+/* Information */
+
+.info-card {
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    padding: 30px;
+
+    border-radius: 20px;
+}
+
+.info-card h2 {
+    margin-bottom: 25px;
+}
+
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.info-grid div {
+
+    background: rgba(0,0,0,0.12);
+
+    padding: 18px;
+
+    border-radius: 12px;
+}
+
+
+.info-grid span {
+    display: block;
+
+    font-size: 13px;
+
+    opacity: 0.7;
+
+    margin-bottom: 8px;
+}
+
+
+/* Error */
+
+.error-message {
+
+    display: none;
+
+    background: #ff4d4d;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+
+/* Loading */
+
+.loading {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 18px;
+}
+
+
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    opacity: 0.7;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .details-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .info-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .details-grid,
+    .info-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .temperature {
+        font-size: 50px;
+    }
+
+}

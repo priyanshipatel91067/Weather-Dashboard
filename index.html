@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1><i class="fa-solid fa-cloud-sun"></i> Weather Dashboard</h1>
+                <p>Real-time weather information</p>
+            </div>
+
+            <button id="refreshBtn">
+                <i class="fa-solid fa-rotate"></i>
+                Refresh
+            </button>
+        </header>
+
+
+        <!-- Search Section -->
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+            >
+
+            <button id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </button>
+
+        </section>
+
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message"></div>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            Loading weather data...
+        </div>
+
+
+        <!-- Weather Dashboard -->
+        <main id="weatherDashboard" class="weather-dashboard">
+
+            <!-- Main Weather Card -->
+            <section class="main-card">
+
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+                        <h2 id="cityName">Ahmedabad</h2>
+                        <p id="countryName">India</p>
+                    </div>
+                </div>
+
+                <div class="weather-icon" id="weatherIcon">
+                    ☀️
+                </div>
+
+                <div class="temperature">
+                    <span id="temperature">--</span>°C
+                </div>
+
+                <p id="weatherDescription">
+                    Search for a city
+                </p>
+
+            </section>
+
+
+            <!-- Weather Details -->
+            <section class="details-grid">
+
+                <div class="weather-card">
+                    <div class="icon">
+                        💧
+                    </div>
+
+                    <div>
+                        <p>Humidity</p>
+                        <h3>
+                            <span id="humidity">--</span>%
+                        </h3>
+                    </div>
+                </div>
+
+
+                <div class="weather-card">
+                    <div class="icon">
+                        💨
+                    </div>
+
+                    <div>
+                        <p>Wind Speed</p>
+                        <h3>
+                            <span id="windSpeed">--</span> km/h
+                        </h3>
+                    </div>
+                </div>
+
+
+                <div class="weather-card">
+                    <div class="icon">
+                        🌡️
+                    </div>
+
+                    <div>
+                        <p>Feels Like</p>
+                        <h3>
+                            <span id="feelsLike">--</span>°C
+                        </h3>
+                    </div>
+                </div>
+
+
+                <div class="weather-card">
+                    <div class="icon">
+                        🌧️
+                    </div>
+
+                    <div>
+                        <p>Precipitation</p>
+                        <h3>
+                            <span id="precipitation">--</span> mm
+                        </h3>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Extra Information -->
+            <section class="info-card">
+
+                <h2>
+                    <i class="fa-solid fa-circle-info"></i>
+                    Weather Information
+                </h2>
+
+                <div class="info-grid">
+
+                    <div>
+                        <span>Latitude</span>
+                        <strong id="latitude">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Longitude</span>
+                        <strong id="longitude">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Timezone</span>
+                        <strong id="timezone">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Last Updated</span>
+                        <strong id="updatedTime">--</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                Weather Dashboard • Built with HTML, CSS & JavaScript
+            </p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
